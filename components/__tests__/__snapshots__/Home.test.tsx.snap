@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Home 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="Home__Title-sc-7m4uo6-0 fFqtIj"
+    >
+      potato
+    </div>
+  </div>
+</DocumentFragment>
+`;
