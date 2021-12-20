@@ -10,7 +10,7 @@ const Title = styled.div`
 const Home = React.memo(function Home() {
   return (
     <div>
-      <Title>potato</Title>
+      <Title>Hi potato!</Title>
     </div>
   );
 });

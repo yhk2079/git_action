@@ -6,7 +6,7 @@ exports[`should render Home 1`] = `
     <div
       class="Home__Title-sc-7m4uo6-0 fFqtIj"
     >
-      potato
+      Hi potato!
     </div>
   </div>
 </DocumentFragment>
