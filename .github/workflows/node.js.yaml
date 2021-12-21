@@ -5,13 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,23 +19,23 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm i corepack
-    - run: yarn install --pure-lockfile
-    - run: yarn run format
-    - run: yarn run eslint
-    - run: yarn run type-check
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm i corepack
+      - run: yarn install --pure-lockfile
+      - run: yarn run format
+      - run: yarn run eslint
+      - run: yarn run type-check
 
-    - name: build
-      run: yarn run build
+      - name: build
+        run: yarn run build
 
-    - name: deploy
-      run: |
-        echo "${{secrets.SSH_KEY}}" > default.pem
-        chmod 700 default.pem
-        scp -o StrictHostKeyChecking=no -i default.pem -r ./out/* ${{secrets.DEPLOY_PATH}}
+      - name: deploy
+        run: |
+          echo "${{secrets.SSH_KEY}}" > default.pem
+          chmod 700 default.pem
+          scp -o StrictHostKeyChecking=no -i default.pem -r ./out/* ${{secrets.DEPLOY_PATH}}

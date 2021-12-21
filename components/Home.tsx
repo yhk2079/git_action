@@ -5,12 +5,13 @@ const Title = styled.div`
   display: flex;
   justify-content: center;
   color: ${({ theme }) => theme.colors.primary};
+  font-size: 18px;
 `;
 
 const Home = React.memo(function Home() {
   return (
     <div>
-      <Title>Hi potato!</Title>
+      <Title>Hi potato!!!!!</Title>
     </div>
   );
 });

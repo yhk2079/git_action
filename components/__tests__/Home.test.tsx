@@ -12,7 +12,7 @@ test('should render Home', async () => {
       </ThemeProvider>
     </MockProvider>,
   );
-  expect(getByText('Hi potato!')).toBeInTheDocument();
+  expect(getByText('Hi potato!!!!!')).toBeInTheDocument();
 
   expect(asFragment()).toMatchSnapshot();
 });

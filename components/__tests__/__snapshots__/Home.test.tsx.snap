@@ -4,9 +4,9 @@ exports[`should render Home 1`] = `
 <DocumentFragment>
   <div>
     <div
-      class="Home__Title-sc-7m4uo6-0 fFqtIj"
+      class="Home__Title-sc-7m4uo6-0 fpFEhU"
     >
-      Hi potato!
+      Hi potato!!!!!
     </div>
   </div>
 </DocumentFragment>
