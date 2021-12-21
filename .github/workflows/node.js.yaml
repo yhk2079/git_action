@@ -39,6 +39,6 @@ jobs:
     - name: deploy
       uses: yhk2079/deploy@v1
     - run: |
-      echo "${{secrets.SSH_KEY}}" > default.pem
-      chmod 700 default.pem
-      scp -i default.pem -r ./out/* ${{secrets.DEPLOY_PATH}}
+        echo "${{secrets.SSH_KEY}}" > default.pem
+        chmod 700 default.pem
+        scp -i default.pem -r ./out/* ${{secrets.DEPLOY_PATH}}
