@@ -33,11 +33,9 @@ jobs:
     - run: yarn run type-check
 
     - name: build
-      uses: yhk2079/build@v1
     - run: yarn run build
 
     - name: deploy
-      uses: yhk2079/deploy@v1
     - run: |
         echo "${{secrets.SSH_KEY}}" > default.pem
         chmod 700 default.pem
