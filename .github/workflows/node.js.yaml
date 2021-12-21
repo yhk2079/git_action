@@ -39,4 +39,4 @@ jobs:
       run: |
         echo "${{secrets.SSH_KEY}}" > default.pem
         chmod 700 default.pem
-        scp -i default.pem -r ./out/* ${{secrets.DEPLOY_PATH}}
+        scp -o StrictHostKeyChecking=no -i default.pem -r ./out/* ${{secrets.DEPLOY_PATH}}
