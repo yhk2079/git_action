@@ -8,6 +8,11 @@ exports[`should render Home 1`] = `
     >
       Hi potato!!!!!
     </div>
+    <a
+      href="/about"
+    >
+      About
+    </a>
   </div>
 </DocumentFragment>
 `;

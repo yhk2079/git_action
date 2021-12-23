@@ -7,5 +7,6 @@ module.exports = {
   // Note: https://nextjs.org/docs/api-reference/next.config.js/exportPathMap
   exportPathMap: async () => ({
     '/': { page: '/' },
+    '/about': { page: '/about' },
   }),
 };

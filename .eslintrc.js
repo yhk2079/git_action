@@ -65,5 +65,13 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     // Note: https://github.com/yannickcr/eslint-plugin-react/issues/2387
     'react/jsx-props-no-spreading': 0,
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
   },
 };
